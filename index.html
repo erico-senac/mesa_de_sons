@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Mesa de Sons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .teclado{
+            padding: 15px;
+            border-width: 5px;
+            border-radius: 15px;
+            border-style: solid;
+            margin: auto;
+            width: 300px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background-color: rgb(81, 84, 89);
+        }
+        .teclas{
+            height: 50px;
+            border-radius: 15px;
+        }
+        .teclas:hover{
+            box-shadow: 1px 1px 1px yellow;
+        }
+        .marck{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="tela">
+        <div class="titulo">
+            <span>Mesa de Sons</span>
+        </div>
+        <div class="teclado">
+            <button class="teclas"> som1 </button>
+            <button class="teclas"> som2 </button>
+            <button class="teclas"> som3 </button>
+            <button class="teclas"> som1 </button>
+            <button class="teclas"> som2 </button>
+            <button class="teclas"> som3 </button>
+            <button class="teclas"> som1 </button>
+            <button class="teclas"> som2 </button>
+            <button class="teclas"> som3 </button>
+        </div>
+    </div>
+    <audio src="./sounds/keya.wav"></audio>
+    <audio src="./sounds/keyc.wav"></audio>
+    <audio src="./sounds/keyd.wav"></audio>
+    <audio src="./sounds/keye.wav"></audio>
+    <audio src="./sounds/keyq.wav"></audio>
+    <audio src="./sounds/keys.wav"></audio>
+    <audio src="./sounds/keyw.wav"></audio>
+    <audio src="./sounds/keyx.wav"></audio>
+    <audio src="./sounds/keyz.wav"></audio>
+    <script>
+        const teclas = document.querySelectorAll('.teclas');
+        teclas.forEach(tecla => {
+            tecla.addEventListener('mousedown', () => {
+                tecla.classList.add('marck');
+            })
+            tecla.addEventListener('mouseup', () => {
+                tecla.classList.remove('marck');
+            })
+        })
+    </script>
+</body>
+</html>
