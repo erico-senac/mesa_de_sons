@@ -4,37 +4,14 @@
     <meta charset="UTF-8">
     <title>Mesa de Sons</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .teclado{
-            padding: 15px;
-            border-width: 5px;
-            border-radius: 15px;
-            border-style: solid;
-            margin: auto;
-            width: 300px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            background-color: rgb(81, 84, 89);
-        }
-        .teclas{
-            height: 50px;
-            border-radius: 15px;
-        }
-        .teclas:hover,
-        .teclas:focus{
-            box-shadow: 1px 1px 1px yellow;
-        }
-        .teclas:active,
-        .mark   {
-            background-color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="shortcut icon" type="image/png" href="./images/bateria.png"/>
 </head>
 <body>
     <div class="tela">
         <div class="titulo">
-            <span>Mesa de Sons</span>
+            <h1>Mesa de Sons</h1>
         </div>
         <div class="teclado">
             <button class="teclas" id="tecla_pom">Pom</button>
