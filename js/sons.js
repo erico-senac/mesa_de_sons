@@ -36,7 +36,7 @@ documento.onkeydown = (evento) => {
         som[0].play();
     }
 }
-documento.onkeyup = (evento) => {
+documento.onkeyup = () => {
     teclas.forEach(tecla => {
         tecla.classList.remove('ativa');
     })
