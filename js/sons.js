@@ -1,8 +1,8 @@
 const documento = document.querySelector("html");
 const teclas = document.querySelectorAll('.teclas');
 const elemento_sons = document.querySelectorAll('audio');
-const toca_som = (nome) => {
-    let idAudio = `som_${nome}`;
+const toca_som = (idname) => {
+    let idAudio = `som_${idname}`;
     const som = document.getElementById(idAudio);
     som.play();
 }
